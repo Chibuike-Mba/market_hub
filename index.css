@@ -3,7 +3,7 @@
 }
 
 html {
-  width: 100%;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -216,8 +216,12 @@ section p {
   margin-right: auto;
 }
 .form_container .form_title {
-  margin-top: 5rem;
+  margin-top: 10rem;
   text-align: center;
+}
+.form_container .login_intro {
+  text-align: justify;
+  text-transform: none;
 }
 .form_container label,
 .form_container legend {
@@ -229,7 +233,7 @@ section p {
   display: block;
   padding: 0.3rem 0 0.3rem 0rem;
   font-size: 1.2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 .form_container #feedback {
   margin-top: 0;
