@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        footer {
+            width: 100%;
+            background-color: red;
+        }
+        
+        footer .art {
+            width: 50%;
+            float: left;
+        }
+
+        footer::after {
+            content: "";
+            display: table;
+            clear: both;
+        } 
+    </style>
+
+</head>
+<body>
+    <header><h1>Freshenger</h1></header>
+    
+    <main>
+        <p>This is a float concept practice.</p>
+    </main>
+
+    <footer class="footer" id="footer"> 
+       <!--  <article class="to_top">
+            <p>Back To Top</p>
+            <hr>
+        </article>
+         -->
+        <article class="art"><p>customer support</p></article>
+        <article class="art"><p>contact us</p></article>
+        <article class="art"><p>report a product</p></article>
+
+        <article class="art"><p>visit our blog</p></article>
+        <article class="art"><p>become an investor</p></article>
+        <article class="art"><p>privacy notice</p></article>
+
+        <article class="art"><p>terms and conditions</p></article>
+        <article class="art"><p>apply to be a rider</p></article>
+        <article class="art"><p>bulk purchase services</p></article>
+    </footer>
+</body>
+</html>
