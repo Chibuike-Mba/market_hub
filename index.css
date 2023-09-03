@@ -326,7 +326,6 @@ html {
 
 html,
 body {
-  max-width: 1920px;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -335,65 +334,85 @@ body {
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(2, min-content) auto max-content;
+  grid-template-rows: min-content auto max-content;
   grid-row-gap: 1rem;
   margin-top: 0;
 }
 
-/* index.html */
+/* Index (index.html) Design */
 .index_body {
   background-color: rgba(200, 252, 191, 0.5);
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: min-content auto max-content;
   grid-row-gap: 0;
-  margin-top: 0;
 }
 .index_body main img {
   width: 100%;
+  height: auto;
 }
 
-/* end */
+/* End of Index (index.html) Design */
+/* Keeping all containers at max-width of 1920px */
+.header_container,
+.main,
+.aside,
+.dashboard_container,
+.footer {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header Design */
 header {
   background-color: rgba(0, 0, 0, 0.8);
   grid-column-start: 1;
   grid-column-end: 13;
   /* Nested Grid */
-  /* Hamburger Items */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.header_container {
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 13;
+  /* Nested Grid */
+  /* Hamburger Button Menu Design */
   /* End of Hamburger Items */
 }
-header img {
+.header_container img {
   cursor: pointer;
+  width: 100%;
+  height: 2.7rem;
 }
-header .header_large {
+.header_container .header_large {
   display: none;
 }
-header .fresh {
+.header_container .fresh {
   padding-left: 0;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 }
-header .fresh li:nth-of-type(1) {
+.header_container .fresh li:nth-of-type(1) {
   grid-column-start: 1;
   grid-column-end: 11;
   list-style-type: none;
   padding-left: 0.8rem;
 }
-header h1,
-header a {
+.header_container h1,
+.header_container a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
 }
-header .fresh li:nth-of-type(2) {
+.header_container .fresh li:nth-of-type(2) {
   grid-column-start: 11;
   grid-column-end: 13;
   list-style-type: none;
   justify-self: end;
   padding-right: 0.8rem;
 }
-header .harmbuger_items {
+.header_container .harmbuger_items {
   background-color: rgba(32, 21, 4, 0.5);
   padding-left: 0;
   padding: 0.2rem;
@@ -401,106 +420,112 @@ header .harmbuger_items {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(4, min-content);
 }
-header .harmbuger_items li {
+.header_container .harmbuger_items li {
   grid-column-start: span 12;
   list-style-type: none;
 }
-header .harmbuger_items h1,
-header .harmbuger_items img {
+.header_container .harmbuger_items h1,
+.header_container .harmbuger_items img {
   text-align: center;
 }
-header .harmbuger_items li:hover {
+.header_container .harmbuger_items li:hover {
   background-color: rgba(10, 77, 79, 0.5);
 }
-header .harmbuger_items h1 {
+.header_container .harmbuger_items h1 {
   font-size: 1.4rem;
 }
-header .harmbuger_items img {
+.header_container .harmbuger_items img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-header .open {
+.header_container .open {
   display: none;
 }
 
-/* dashboard.html */
-.dashboard_body {
+/* End of Header Design */
+/* Dashboard (dashboard.html) Design */
+.dashboard_container {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  /* Nested Grid */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: min-content repeat(2, max-content) auto max-content;
+  grid-template-rows: repeat(2, max-content) auto;
+  grid-row-gap: 1rem;
 }
-.dashboard_body section {
+.dashboard_container section {
   width: 90%;
   grid-column-start: span 12;
   justify-self: center;
 }
-.dashboard_body section p {
+.dashboard_container section p {
   border: 0.2rem ridge black;
   border-radius: 1rem;
   font-size: 1.5rem;
   text-align: center;
   padding: 0.5rem 0.5rem;
 }
-.dashboard_body section hr {
+.dashboard_container section hr {
   border: 0.1rem ridge rgb(0, 0, 0);
 }
-.dashboard_body aside {
+.dashboard_container aside {
   width: 90%;
   background-color: rgba(184, 136, 32, 0.5);
   grid-column-start: span 12;
   font-size: 1.5rem;
   justify-self: center;
 }
-.dashboard_body aside h2,
-.dashboard_body aside p {
+.dashboard_container aside h2,
+.dashboard_container aside p {
   font-size: 1.5rem;
   text-align: center;
 }
-.dashboard_body aside ol li {
+.dashboard_container aside ol li {
   font-size: 1.5rem;
   line-height: 3;
 }
-.dashboard_body aside button,
-.dashboard_body aside input {
+.dashboard_container aside button,
+.dashboard_container aside input {
   width: 100%;
   font-size: 1.5rem;
 }
-.dashboard_body aside .hide {
+.dashboard_container aside .hide {
   display: none;
 }
-.dashboard_body main {
+.dashboard_container main {
   grid-column-start: span 12;
   /* Nested Grid */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
-.dashboard_body main img {
+.dashboard_container main img {
   width: 100%;
   height: 60%;
 }
-.dashboard_body main article:nth-of-type(even) {
+.dashboard_container main article:nth-of-type(even) {
   background-color: rgba(165, 42, 42, 0.5);
 }
-.dashboard_body main article:nth-of-type(odd) {
+.dashboard_container main article:nth-of-type(odd) {
   background-color: rgba(18, 156, 34, 0.5);
 }
-.dashboard_body main article {
+.dashboard_container main article {
   grid-column-start: span 12;
   margin: 0.7rem;
   border: 0.2rem ridge black;
 }
-.dashboard_body main h3,
-.dashboard_body main p {
+.dashboard_container main h3,
+.dashboard_container main p {
   text-align: center;
   font-size: 1.4rem;
 }
-.dashboard_body .welcome_msg {
+.dashboard_container .welcome_msg {
   color: white;
   text-align: center;
 }
 
-/* end */
+/* End of Dashboard (dashboard.html) Design */
+/* Aside Design */
 aside {
   grid-column-start: 1;
   grid-column-end: 13;
@@ -511,12 +536,14 @@ aside p {
   padding: 0 2rem;
 }
 
+/* End of Aside Design */
+/* Main Design */
 main {
   grid-column-start: 1;
   grid-column-end: 13;
   padding: 0.2rem;
-  /* register.html */
-  /* end */
+  /* Register (register.html) Specific Design */
+  /* End of Register (register.html) Specific Design*/
 }
 main form {
   padding: 1rem;
@@ -546,11 +573,15 @@ main .feedback {
   display: none;
 }
 
+/* End of Main Design */
+/* Footer Design */
 footer {
   background-color: rgba(0, 0, 0, 0.8);
   grid-column-start: 1;
   grid-column-end: 13;
   /* Nested Grid */
+}
+footer section {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   justify-items: center;
@@ -568,6 +599,7 @@ footer p {
   text-transform: capitalize;
 }
 
+/* End of Footer Design */
 @media only screen and (width >= 412px) {
   main {
     justify-self: center;
@@ -589,35 +621,45 @@ footer p {
   .footer article:nth-of-type(10) {
     grid-column-start: span 12;
   }
-  /* dashboard.html */
-  .dashboard_body main article {
+  /* Dashboard (dashboard.html) Design */
+  .dashboard_container main article {
     grid-column-start: span 6;
   }
 }
-/* dashboard.html specific */
+/* Dashboard (dashboard.html) Specific */
 @media only screen and (width >= 540px) {
-  /* dashboard.html */
-  .dashboard_body section {
+  /* Dashboard (dashboard.html) Design */
+  .dashboard_container {
+    width: 95%;
+  }
+  .dashboard_container section {
     background-color: rgba(136, 128, 210, 0.5);
     grid-column-start: span 5;
     padding: 0.4rem;
   }
-  .dashboard_body section,
-  .dashboard_body aside,
-  .dashboard_body main {
+  .dashboard_container section,
+  .dashboard_container aside,
+  .dashboard_container main {
     width: 95%;
   }
-  .dashboard_body aside {
+  .dashboard_container aside {
     grid-column-start: span 7;
   }
-  .dashboard_body main article {
+  .dashboard_container main {
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .dashboard_container main article {
     grid-column-start: span 6;
   }
 }
 @media only screen and (width > 768px) {
   main {
     width: 60%;
-    justify-self: center;
+  }
+  /* Index (index.html) Design */
+  .index_main {
+    width: 80%;
   }
   #top_div {
     display: none;
@@ -665,37 +707,32 @@ footer p {
   .footer article:nth-of-type(10) {
     grid-column-start: span 12;
   }
-  /* dashboard.html */
-  .dashboard_body section {
-    grid-column-start: span 5;
-    padding: 0.4rem;
-  }
-  .dashboard_body aside {
-    grid-column-start: span 7;
-  }
-  .dashboard_body main article {
+  /* Dashboard (dashboard.html) Design */
+  .dashboard_container main article {
     grid-column-start: span 4;
   }
 }
-/* dashboard.html specific (for larger screen sizes) */
+/* Dashboard (dashboard.html) Specific */
 @media only screen and (width >= 1440px) {
-  /* dashboard.html */
-  .dashboard_body section {
+  /* Dashboard (dashboard.html) Design */
+  .dashboard_container section {
     grid-column-start: 1;
     grid-column-end: span 4;
-    padding: 0.4rem;
+    grid-row-start: span 1;
+    padding-left: 0.5rem;
   }
-  .dashboard_body aside {
+  .dashboard_container aside {
     grid-column-start: 1;
     grid-column-end: span 4;
+    grid-row-start: span 2;
   }
-  .dashboard_body main {
+  .dashboard_container main {
     grid-column-start: 5;
     grid-column-end: span 8;
-    grid-row-end: span 2;
-    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-row-start: 1;
   }
-  .dashboard_body main article {
+  .dashboard_container main article {
     grid-column-start: span 6;
   }
 }/*# sourceMappingURL=index.css.map */
