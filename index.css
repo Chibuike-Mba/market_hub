@@ -603,7 +603,8 @@ footer p {
     padding: 0.4rem;
   }
   .dashboard_body section,
-  .dashboard_body aside {
+  .dashboard_body aside,
+  .dashboard_body main {
     width: 95%;
   }
   .dashboard_body aside {
@@ -615,7 +616,7 @@ footer p {
 }
 @media only screen and (width > 768px) {
   main {
-    width: 80%;
+    width: 60%;
     justify-self: center;
   }
   #top_div {
@@ -624,10 +625,6 @@ footer p {
   #header_large {
     display: block;
     /* Nested Grid */
-  }
-  #header_large li:nth-of-type(5) img {
-    width: 100%;
-    height: 3rem;
   }
   #header_large .header_ul {
     padding-left: 0;
@@ -660,7 +657,7 @@ footer p {
 }
 @media only screen and (width >= 912px) {
   main {
-    width: 90%;
+    width: 60%;
   }
   .footer .art {
     grid-column-start: span 3;
@@ -672,10 +669,6 @@ footer p {
   .dashboard_body section {
     grid-column-start: span 5;
     padding: 0.4rem;
-  }
-  .dashboard_body section,
-  .dashboard_body aside {
-    width: 95%;
   }
   .dashboard_body aside {
     grid-column-start: span 7;
@@ -691,10 +684,6 @@ footer p {
     grid-column-start: 1;
     grid-column-end: span 4;
     padding: 0.4rem;
-  }
-  .dashboard_body section,
-  .dashboard_body aside {
-    width: 95%;
   }
   .dashboard_body aside {
     grid-column-start: 1;
