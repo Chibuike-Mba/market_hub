@@ -411,15 +411,11 @@ header .harmbuger_items img {
 header .harmbuger_items li:hover {
   background-color: rgba(10, 77, 79, 0.5);
 }
-header .harmbuger_items .svg {
-  height: 3rem;
-}
 header .harmbuger_items h1 {
   font-size: 1.4rem;
 }
 header .harmbuger_items img {
   display: block;
-  height: 2.3rem;
   margin-left: auto;
   margin-right: auto;
 }
