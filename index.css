@@ -568,7 +568,7 @@ footer p {
   text-transform: capitalize;
 }
 
-@media only screen and (width > 425px) {
+@media only screen and (width >= 412px) {
   main {
     justify-self: center;
     width: 90%;
@@ -588,6 +588,10 @@ footer p {
   }
   .footer article:nth-of-type(10) {
     grid-column-start: span 12;
+  }
+  /* dashboard.html */
+  .dashboard_body main article {
+    grid-column-start: span 6;
   }
 }
 /* dashboard.html specific */
